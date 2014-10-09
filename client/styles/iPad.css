@@ -1,0 +1,8 @@
+#quote {
+	visibility: hidden;
+	display: none;
+}
+#halfLogo {
+	visibility: visible;
+	display: inline;
+}

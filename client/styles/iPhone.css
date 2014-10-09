@@ -1,0 +1,11 @@
+body {
+	-webkit-text-size-adjust: 100%;
+}
+#quote {
+	visibility: hidden;
+	display: none;
+}
+#halfLogo {
+	visibility: visible;
+	display: inline;
+}

@@ -1,0 +1,249 @@
+body {
+	position: relative;
+	min-width: 760px;
+	overflow-x: hidden;
+	font-family: arial;
+	font-size: 16px;
+	background-color: #fff;
+}
+img {
+	border: 0px;
+}
+article {
+	position: relative;
+	width: 480px;
+	min-height: 680px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+
+	/* required to fix spacing of article */
+	border-top: 1px solid #fff;
+}
+.p, p {
+	line-height: 30px;
+}
+ul {
+	list-style-type: none;
+}
+li {
+	background: url('https://www.fuzzybit.com/images/10.png') no-repeat top left;
+	padding-left: 12px;
+}
+.edgeLogo {
+	position: absolute;
+	z-index: 1;
+	top: 130px;
+	left: -240px;
+	width: 360px;
+	height: 302px;
+	overflow: hidden;
+}
+.halfLogo {
+	float: left;
+	margin-top: 8px;
+	margin-right: 8px;
+	visibility: hidden;
+	display: none;
+}
+.logoImage {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+#fuzzybit {
+	position: relative;
+	z-index: 9;
+	top: -24px;
+	left: -8px;
+	font-family: arial;
+	font-size: 10px;
+	white-space: nowrap;
+	text-shadow: 0px 0px 106px #ccc;
+	color: #ddd;
+}
+#fuzzy {
+	font-weight: bold;
+	font-size: 8em;
+}
+#bit {
+	font-weight: lighter;
+	font-size: 5.8em;
+}
+#motto {
+	font-size: 34px;
+	font-weight: lighter;
+	color: #ddd;
+}
+.fuzzybit {
+	font-size: 1.0em;
+}
+.fuzzy {
+	font-weight: bold;
+}
+.bit {
+	font-size: 0.75em;
+}
+#topLine {
+	position: relative;
+	font-weight: lighter;
+	text-align: center;
+	color: #ccc;
+	border-bottom: 1px solid #ddd;
+}
+.footerLine {
+	clear: both;
+	position: relative;
+	font-weight: lighter;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+.footerLine a {
+	color: #bbb;
+}
+#upperFooter {
+	padding: 4px;
+	font-size: 12px;
+}
+#lowerFooter {
+	padding: 4px;
+	text-align: center;
+	font-size: 9px;
+}
+input[type="submit"], input[type="reset"] {
+	position: relative;
+	width: 120px;
+	padding: 4px;
+	font-size: 16px;
+	text-align: center;
+	box-shadow: 0px 0px 50px #ddd;
+	-webkit-box-shadow: 0px 0px 50px #ddd;
+	border-top: 1px solid #aaa;
+	border-right: 0px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	border-left: 0px solid #aaa;
+	color: #aaa;
+	background-color: #fff;
+}
+input[type="checkbox"] {
+	margin: 4px;
+	background-color: #ccc;
+}
+.button {
+	position: relative;
+	width: 120px;
+	padding: 4px;
+	text-align: center;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	box-shadow: 0px 0px 50px #ddd;
+	color: #ddd;
+	-webkit-box-shadow: 0px 0px 50px #ddd;
+}
+.button:hover {
+	box-shadow: 0px 0px 50px #ccc;
+	color: #999;
+	-webkit-box-shadow: 0px 0px 50px #ccc;
+}
+.button a {
+	text-decoration: none;
+	color: #bbb;
+}
+.button a:hover {
+	color: #999;
+}
+#leftArticleButton {
+	float: left;
+	width: auto;
+}
+#rightArticleButton {
+	float: right;
+	width: auto;
+}
+#shadowBox {
+	position: relative;
+	float: left;
+	top: 40px;
+	left: -280px;
+	width: 260px;
+	height: 240px;
+	margin: 12px 12px 12px 0px;
+	box-shadow: 280px -30px 16px #ccc;
+	-webkit-box-shadow: 280px -30px 16px #ccc;
+}
+#shadowBoxFloater {
+	position: absolute;
+	float: left;
+	top: -10px;
+	left: 280px;
+	width: 220px;
+	height: 200px;
+	background-color: #ccc;
+}
+#shadowBoxShade {
+	position: relative;
+	top: -10px;
+	left: 296px;
+	width: 220px;
+	padding: 4px;
+	font-family: arial;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+}
+#shadowBoxShade>div {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+#shadowBoxShade span {
+	font-size: 18px;
+}
+#shadowBoxShade a, #shadowBoxShadeSmall a {
+	color: #fff;
+	text-decoration: none;
+}
+.button a:link:before, .button a:link:after {
+	content: url('../images/00.png');
+}
+.button a:visited:before, .button a:visited:after {
+	content: url('../images/00.png');
+}
+.button a:hover:before, .button a:hover:after {
+	content: url('../images/01.png');
+}
+.button a:active:before, .button a:active:after {
+	content: url('../images/10.png');
+}
+#splitBox {
+	position: absolute;
+	z-index: -1;
+	top: -80px;
+	left: -96px;
+	width: 341px;
+	height: 400px;
+}
+#splitBoxImage {
+	position: relative;
+	top: 130px;
+	left: 0px;
+	width: 341px;
+	height: 300px;
+	background-image: url('../images/logo.jpg');
+}
+#splitBoxBackCover {
+	position: absolute;
+	top: 80px;
+	left: 80px;
+	width: 269px;
+	height: 400px;
+	border-right: 0px solid #aaa;
+	background-color: #fff;
+}
+#splitBoxFrontCover {
+	position: relative;
+	top: 30px;
+	width: 140px;
+	height: 340px;
+	border-left: 1px solid #aaa;
+}

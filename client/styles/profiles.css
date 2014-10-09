@@ -1,0 +1,104 @@
+.profilesShadowBox {
+	position: relative;
+	float: left;
+	top: 0px;
+	left: -480px;
+	width: 220px;
+	height: 220px;
+	margin: 12px 12px 12px 0px;
+}
+.profilesShadowBoxShade {
+	position: relative;
+	top: 20px;
+	left: 494px;
+	width: 180px;
+	padding: 4px;
+	font-family: arial;
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+}
+.profilesShadowBoxShade span {
+	font-size: 18px;
+}
+.profilesShadowBoxSmall {
+	position: relative;
+	float: left;
+	top: 0px;
+	left: -480px;
+	width: 110px;
+	height: 110px;
+	margin: 6px 6px 6px 6px;
+}
+.profilesShadowBoxShadeSmall {
+	position: relative;
+	top: 20px;
+	left: 494px;
+	width: 70px;
+	padding: 4px;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+}
+.profilesShadowBoxShade a, .profilesShadowBoxShadeSmall a {
+	color: #fff;
+}
+article .non {
+	box-shadow: 480px 10px 16px #ccc;
+	-webkit-box-shadow: 480px 10px 16px #ccc;
+}
+article #err {
+	box-shadow: 480px 10px 16px #ee6;
+	-webkit-box-shadow: 480px 10px 16px #ee6;
+}
+#non>.profilesShadowBoxShadeSmall>div>a {
+	color: #fff;
+}
+article #pro {
+	box-shadow: 480px 10px 16px #69B1FF;
+	-webkit-box-shadow: 480px 10px 16px #69B1FF;
+}
+article #afi {
+	float: right;
+	box-shadow: 480px 10px 16px #3ac;
+	-webkit-box-shadow: 480px 10px 16px #3ac;
+}
+article #for {
+	box-shadow: 480px 10px 16px #eb7;
+	-webkit-box-shadow: 480px 10px 16px #eb7;
+}
+article #sta {
+	float: right;
+	box-shadow: 480px 10px 16px #69b;
+	-webkit-box-shadow: 480px 10px 16px #69b;
+}
+article #ent {
+	box-shadow: 480px 10px 16px #b69;
+	-webkit-box-shadow: 480px 10px 16px #b69;
+}
+article #pas {
+	float: right;
+	box-shadow: 480px 10px 16px #9b6;
+	-webkit-box-shadow: 480px 10px 16px #9b6;
+}
+article #pasSmall {
+	box-shadow: 480px 10px 16px #9b6;
+	-webkit-box-shadow: 480px 10px 16px #9b6;
+}
+article #tra {
+	box-shadow: 480px 10px 16px #793;
+	-webkit-box-shadow: 480px 10px 16px #793;
+}
+article #wor {
+	float: right;
+	box-shadow: 480px 10px 16px #FF8658;
+	-webkit-box-shadow: 480px 10px 16px #FF8658;
+}
+.cost {
+	font-size: 20px;
+}
+a {
+	color: #999;
+	text-decoration: none;
+}
