@@ -13,7 +13,7 @@ var protocol = "https://";
 /**
  * HOST
  */
-var host = "[HOST]";
+var host = "[HOST]/";
 
 /**
  * These are constants that need to be factored out possibly by making ajax calls to the API.
