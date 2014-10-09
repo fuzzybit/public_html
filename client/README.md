@@ -41,4 +41,4 @@ Create a copy of 'javascript/default.constants.js' as 'javascript/constants.js',
 
 If you already have not done so, proceed to download and install the **private** component above the 'public_html/' folder and make note of the location. Create a copy of 'default.constants.php' as 'constants.php' and edit '[PATH TO PRIVATE]' to be the location of the **private** component.
 
-To complete the installation, go to https://www.fuzzybit.com/registration.php to obtain a secret key and specify an application ID.
+To complete the installation, go to https://www.fuzzybit.com/ (tba) to obtain a secret key and specify an application ID.
