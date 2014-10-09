@@ -1,3 +1,9 @@
+@import url(weloveiconfonts.css);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 body {
 	position: relative;
 	min-width: 760px;

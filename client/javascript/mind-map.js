@@ -112,6 +112,8 @@ cluster.prototype.click = function(label) {
  * STREAM
  */
 function stream(cx, cy, ring) {
+	this.ns = "http://www.w3.org/2000/svg";
+
 	this.cx = cx;
 	this.cy = cy;
 	this.ring = ring;
