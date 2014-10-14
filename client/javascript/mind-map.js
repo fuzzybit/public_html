@@ -44,9 +44,11 @@ cluster.prototype.set = function(id, rad) {
 		rad = 0;
 
 	var circle = document.getElementById(id);
-	circle.setAttribute("r", this.r);
-	circle.setAttribute("cx", this.cx - innerRing * Math.cos(rad * Math.PI));
-	circle.setAttribute("cy", this.cy - innerRing * Math.sin(rad * Math.PI));
+	if (circle != null) {
+		circle.setAttribute("r", this.r);
+		circle.setAttribute("cx", this.cx - innerRing * Math.cos(rad * Math.PI));
+		circle.setAttribute("cy", this.cy - innerRing * Math.sin(rad * Math.PI));
+	}
 }
 
 cluster.prototype.label = function(id, label, rad) {
@@ -63,9 +65,11 @@ cluster.prototype.label = function(id, label, rad) {
 	var text = document.getElementById(id + "_label");
 
 	var node = document.createTextNode(label);
-	text.appendChild(node);
-	text.setAttribute("x", this.cx - innerRing * Math.cos(rad * Math.PI));
-	text.setAttribute("y", this.cy - innerRing * Math.sin(rad * Math.PI) + margin);
+	if (text != null && node != null) {
+		text.appendChild(node);
+		text.setAttribute("x", this.cx - innerRing * Math.cos(rad * Math.PI));
+		text.setAttribute("y", this.cy - innerRing * Math.sin(rad * Math.PI) + margin);
+	}
 }
 
 cluster.prototype.click = function(label) {
@@ -124,10 +128,12 @@ function stream(cx, cy, ring) {
 
 stream.prototype.set = function(id, rad) {
 	var line = document.getElementById(id);
-	line.setAttribute("x1", this.cx - this.outerRing * Math.cos(rad * Math.PI));
-	line.setAttribute("y1", this.cy - this.outerRing * Math.sin(rad * Math.PI));
-	line.setAttribute("x2", this.cx + this.outerRing * Math.cos(rad * Math.PI));
-	line.setAttribute("y2", this.cy + this.outerRing * Math.sin(rad * Math.PI));
+	if (line != null) {
+		line.setAttribute("x1", this.cx - this.outerRing * Math.cos(rad * Math.PI));
+		line.setAttribute("y1", this.cy - this.outerRing * Math.sin(rad * Math.PI));
+		line.setAttribute("x2", this.cx + this.outerRing * Math.cos(rad * Math.PI));
+		line.setAttribute("y2", this.cy + this.outerRing * Math.sin(rad * Math.PI));
+	}
 }
 
 stream.prototype.label = function(id, label, rad) {
@@ -143,9 +149,11 @@ stream.prototype.label = function(id, label, rad) {
 	var text = document.getElementById(id + "_label");
 
 	var node = document.createTextNode(label);
-	text.appendChild(node);
-	text.setAttribute("x", this.cx - this.outerRing * Math.cos(rad * Math.PI) + margin);
-	text.setAttribute("y", this.cy - this.outerRing * Math.sin(rad * Math.PI) + margin);
+	if (text != null && node != null) {
+		text.appendChild(node);
+		text.setAttribute("x", this.cx - this.outerRing * Math.cos(rad * Math.PI) + margin);
+		text.setAttribute("y", this.cy - this.outerRing * Math.sin(rad * Math.PI) + margin);
+	}
 }
 
 stream.prototype.streamHelper = function(label, datum) {
