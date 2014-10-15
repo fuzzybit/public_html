@@ -19,12 +19,16 @@ fuzzybitForm.prototype.scanForm = function(event) {
 
     var mode = href.match(/\/mode\/edit/);
     var node = href.match(/\/node\/(\d+)\.(\d+)/);
-//    if ((mode == null) && (node == null))
-//        return false;
-//    else if (mode != null)
+
+	var callback = function(){};
+	/** TO DO: make slight adjustment to the form submission and callback logic when URI is not 'xoo/sprite/' based **/
+    if ((mode == null) && (node == null))
+        return false;
+    else if (mode != null)
         var callback = callback_function;
-//    else
-//        var callback = eval("id_" + node[1] + "_" + node[2]);
+    else if (node != null)
+        var callback = eval("id_" + node[1] + "_" + node[2]);
+	/** TO DO **/
 
     var childNodes = event.currentTarget.childNodes;
 
