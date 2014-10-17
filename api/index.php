@@ -21,7 +21,7 @@
 	require_once("$path/php5/logic/HTTPStatusCodes.php");
 
 	require_once("$path/applications/models/front.php");
-	require_once("$path/applications/models/icontroller.php");
+	require_once("$path/applications/models/IController.php");
 	require_once("$path/applications/models/view.php");
 	require_once("$path/applications/controllers/front/layout.php");
 	require_once("$path/applications/controllers/front/api.php");
