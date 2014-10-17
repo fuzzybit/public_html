@@ -8,7 +8,7 @@
 /**
  * HTTPS protocol
  */
-var protocol = "https://";
+var protocol = "https";
 
 /**
  * HOST
@@ -22,7 +22,7 @@ var host = "[HOST]/";
 /**
  * REFERENCED BY core.js
  */
-var signatureDimensionsURI = protocol + host + "client/xoo/sprite/value/17/node/7904.1";
+var signatureDimensionsURI = protocol + "://" + host + "xoo/sprite/value/17/node/7904.1";
 
 /**
  * REFERENCED BY js.js
