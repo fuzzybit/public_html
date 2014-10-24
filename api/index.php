@@ -31,6 +31,8 @@
 	require_once("$path/applications/controllers/action/LayoutNode.php");
 	require_once("$path/applications/controllers/action/LayoutView.php");
 
+	session_start();
+
 	$front = FrontController::getInstance();
 
 	$front->route();
@@ -40,3 +42,17 @@
 	echo $front->body;
 
 	FrontController::destroy();
+
+	/**
+	 * PHP session destroying code from `http://ca3.php.net/manual/en/function.session-destroy.php`.
+	 */
+
+	$_SESSION = array();
+
+	if (ini_get("session.use_cookies")) {
+		$params = session_get_cookie_params();
+
+		setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
+	}
+
+	session_destroy();
