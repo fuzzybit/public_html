@@ -23,7 +23,6 @@
 	require_once("$path/applications/models/front.php");
 	require_once("$path/applications/models/IController.php");
 	require_once("$path/applications/models/view.php");
-	require_once("$path/applications/controllers/front/layout.php");
 	require_once("$path/applications/controllers/front/api.php");
 	require_once("$path/applications/controllers/action/ILayoutNode.php");
 	require_once("$path/applications/controllers/action/ILayoutView.php");
