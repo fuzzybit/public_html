@@ -190,10 +190,15 @@ function getRequestJSON() {
 
                 var dateTime = json.dateTime;
 
+				var errorMessage = json.errorMessage;
+
 				blnFound = (dateTime == arrRequest[i][0]);
 
 				if (blnFound) {
                     arrRequest.splice(i, 1);
+
+					if (errorMessage != "")
+						window.location = window.location.href.replace(/\/$/, "") + "/error/" + errorMessage;
 
 					break;
                 }
@@ -208,6 +213,52 @@ function getRequestJSON() {
 		}
 	}
 }
+
+/**
+ * This function prepares a JSON ajax request object.
+ * NOTE: Temporarily added function to provide ajax callback for front-end pages.
+ */
+function getRequestJSONSpecial() {
+	for (i in arrRequest)
+	{
+		if (arrRequest[i][1].readyState == 4)
+		{
+			if (arrRequest[i][1].status == 200 || arrRequest[i][1].status == 201 || arrRequest[i][1].status == 409)
+			{
+                json = eval("(" + arrRequest[i][1].responseText + ")");
+
+                var dateTime = json.dateTime;
+
+				var errorMessage = json.errorMessage;
+
+				blnFound = (dateTime == arrRequest[i][0]);
+
+				if (blnFound) {
+                    arrRequest.splice(i, 1);
+
+					if (errorMessage != "") {
+						window.location = "?error=" + errorMessage;
+					} else {
+						var node = json.data.metadata.node;
+
+						if (node != null && node.match(/\d+\.\d+/))
+							eval("id_" + node.replace(".", "_") + "()");
+					}
+
+					break;
+                }
+			}
+			else if (arrRequest[i][1].status == 400)
+			{
+				blnError = (arrRequest[i][1].getResponseHeader("Status") == arrRequest[i][0]);
+    
+				if (blnError)
+					break;
+			}
+		}
+	}
+}
+
 
 function turnOffIndicator()
 {
