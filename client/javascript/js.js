@@ -20,12 +20,12 @@ fuzzybitForm.prototype.scanForm = function(event) {
     var mode = href.match(/\/mode\/edit/);
     var node = href.match(/\/node\/(\d+)\.(\d+)/);
 
-	var callback = function(){};
 	/** TO DO: make slight adjustment to the form submission and callback logic when URI is not 'xoo/sprite/' based **/
+	/** Also need to fix callback function to call 'getRequestJSON()' only once. **/
     if ((mode == null) && (node == null))
-        return false;
+        var callback = getRequestJSONSpecial;
     else if (mode != null)
-        var callback = callback_function;
+        var callback = callback_function; // in 'constants.js'
     else if (node != null)
         var callback = eval("id_" + node[1] + "_" + node[2]);
 	/** TO DO **/
