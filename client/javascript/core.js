@@ -487,14 +487,14 @@ function saveLayout() {
 
 	var edits = modifications.join(",");
 
-	var pattern = /tokenID=([a-zA-Z0-9]*)/g;
+	var pattern = /tokenID=([a-zA-Z0-9\.\-_,\|%]*)/g;
 	var token = pattern.exec(document.cookie);
 
 	URI = URI.replace(/\./g, '%2E');
 	URI = URI.replace(/\//g, '%2F');
 	URI = URI.replace(/:/g, '%3A');
 
-	var datum = "URI/" + encodeURIComponent(URI) + "/signature/" + signature + "/dimensions/" + dimensions + "/edits/" + edits + "/token/PageURI." + token[1] + "/";
+	var datum = "URI/" + encodeURIComponent(URI) + "/signature/" + signature + "/dimensions/" + dimensions + "/edits/" + edits + "/token/" + token[1] + "/";
 
 	sendURIEncodedRequest(signatureDimensionsURI, datum, layoutSaved, "PATCH");
 }
