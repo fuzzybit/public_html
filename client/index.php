@@ -6,7 +6,7 @@
 	 * @package	FuzzyBit XOO
 	 */
 
-	if (!isset($_SERVER["HTTPS"]) && $_SERVER["SERVER_PORT"] != 443) {
+	if ((!isset($_SERVER["HTTPS"])) && $_SERVER["SERVER_PORT"] != 443) {
 		header("HTTP/1.1 403 Forbidden");
 		exit;
 	}
@@ -22,9 +22,6 @@
 	require_once("$path/applications/models/view.php");
 	require_once("$path/applications/controllers/front/layout.php");
 
-	ini_set('session.cookie_secure', TRUE);	
-	session_start();
-
 	$front = FrontController::getInstance();
 
 	$front->route();
@@ -34,5 +31,3 @@
 	echo $front->body;
 
 	FrontController::destroy();
-
-	session_write_close();
