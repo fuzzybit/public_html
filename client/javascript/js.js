@@ -130,7 +130,7 @@ fuzzybitForm.prototype.scan = function(nodes) {
                     break;
                 case "textarea":
                     if (node.getAttribute("name") != null)
-                        formFields[formFields.length] = node.getAttribute("name") + "=" + encodeURIComponent(node.value).replace(/=/g, "&equiv;");
+                        formFields[formFields.length] = node.getAttribute("name") + "=" + encodeURIComponent(node.value);
 
                     break;
                 default:
