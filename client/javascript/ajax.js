@@ -123,7 +123,7 @@ function sendURIEncodedRequest(url, post, callback, method)
 	var dateTime = new Date().getTime();
 
 	if (method == "POST")
-		post = "dateTime=" + dateTime + "&" + post;
+		post = "dateTime=" + dateTime + "&" + encodeURI(post);
 	else if (method == "PATCH")
 		url = url + "/dateTime/" + dateTime + "/" + post;
 
