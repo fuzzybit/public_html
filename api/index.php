@@ -13,34 +13,29 @@
 
 	require_once("constants.php");
 
-	require_once("$path/php5/Container.php");
-	require_once("$path/php5/APICaller.php");
-	require_once("$path/php5/logic/Form.php");
-	require_once("$path/php5/logic/FormSignature.php");
-	require_once("$path/php5/logic/MyClass.php");
-	require_once("$path/php5/logic/HTTPStatusCodes.php");
+	// Required Files
+	require_once("$path/php5/global.php");
 
-	require_once("$path/applications/models/front.php");
-	require_once("$path/applications/models/IController.php");
-	require_once("$path/applications/models/view.php");
-	require_once("$path/applications/controllers/front/api.php");
+	// Interfaces
 	require_once("$path/applications/controllers/action/ILayoutNode.php");
 	require_once("$path/applications/controllers/action/ILayoutView.php");
+	require_once("$path/applications/models/IController.php");
+
+	// Classes
 	require_once("$path/applications/controllers/action/Layout.php");
 	require_once("$path/applications/controllers/action/LayoutNode.php");
 	require_once("$path/applications/controllers/action/LayoutView.php");
+	require_once("$path/applications/controllers/front/api.php");
+	require_once("$path/applications/models/front.php");
 
 	session_start();
 
-	$front = FrontController::getInstance();
-
+	$front = Container::controller();
 	$front->route();
 
 	ob_start("ob_gzhandler");
 
 	echo $front->body;
-
-	FrontController::destroy();
 
 	/**
 	 * PHP session destroying code from `http://ca3.php.net/manual/en/function.session-destroy.php`.

@@ -229,22 +229,22 @@ function getRequestJSONSpecial() {
 
                 var dateTime = json.dateTime;
 
-				var errorMessage = json.errorMessage;
+				var error = json.error;
 
 				blnFound = (dateTime == arrRequest[i][0]);
 
 				if (blnFound) {
                     arrRequest.splice(i, 1);
-
-					if (errorMessage != "") {
-						window.location = "?error=" + errorMessage;
+/**
+					if (error != null) {
+						window.location = "?error=" + error.metadata.ID;
 					} else {
 						var node = json.data.metadata.node;
 
 						if (node != null && node.match(/\d+\.\d+/))
 							eval("id_" + node.replace(".", "_") + "()");
 					}
-
+**/
 					break;
                 }
 			}
