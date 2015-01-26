@@ -14,18 +14,17 @@
 	require_once("constants.php");
 
 	// Required Files
-	require_once("$path/php5/global.php");
+	require_once("$path/utilities/global.php");
 
 	// Interfaces
-	require_once("$path/applications/controllers/action/ILayoutNode.php");
-	require_once("$path/applications/controllers/action/ILayoutView.php");
-	require_once("$path/applications/models/IController.php");
+	require_once("$path/applications/controllers/front/ILayoutNode.php");
+	require_once("$path/applications/controllers/front/ILayoutView.php");
 
 	// Classes
-	require_once("$path/applications/controllers/action/Layout.php");
-	require_once("$path/applications/controllers/action/LayoutNode.php");
-	require_once("$path/applications/controllers/action/LayoutView.php");
-	require_once("$path/applications/controllers/front/api.php");
+	require_once("$path/applications/controllers/action/API.php");
+	require_once("$path/applications/controllers/front/Layout.php");
+	require_once("$path/applications/controllers/front/LayoutNode.php");
+	require_once("$path/applications/controllers/front/LayoutView.php");
 	require_once("$path/applications/models/front.php");
 
 	session_start();
